@@ -1,5 +1,18 @@
+import argparse
+from task_manager.tareas import saludo
+
+
+
+
 def main():
-  print('Bienvenido al gestor de Tareas')
+    parser = argparse.ArgumentParser(description='Saludador')
+    parser.add_argument('--nombre',type=str, help='Tu nombre')
+    args = parser.parse_args()
+
+
+    saludo(args.nombre)
+
+
 
 
 
