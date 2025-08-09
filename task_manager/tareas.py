@@ -27,3 +27,14 @@ def guardar_tarea(descripcion):
 
     
     
+def listado():
+    if os.path.exists(TAREAS_FILE):
+        
+        with open(TAREAS_FILE, 'r', encoding='utf-8') as f:
+          tareas=json.load(f)
+          print('Listado de tareas:\n')
+        for i, tarea in enumerate(tareas , start=1):
+            print(f"{i}. {tarea['descripcion']}")
+    else:
+
+        print("No hay tareas guardadas")
