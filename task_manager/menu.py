@@ -16,8 +16,10 @@ def menu():
        
     elif opcion == 3:
        print("dentro de 3")
+       break
        
     else:
         execute = False
-        print("execute es igual a falso Salir ")
+        print("Elija una de las 3 opciones ")
+        menu()
 
